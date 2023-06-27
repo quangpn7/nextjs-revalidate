@@ -4,25 +4,46 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
+    "forceConsistentCasingInFileNames": true,
     "incremental": true,
+    "strict": false,
+    "strictNullChecks": true,
+    "typeRoots": ["node_modules/@types", "./types"],
+    "baseUrl": ".",
+    "paths": {
+      "@public/*": ["./public/*"],
+      "@/*": ["./src/*"],
+      "@api/*": ["./src/api/*"],
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["src/page/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@config/*": ["./src/config/*"],
+      "@helpers/*": ["./src/helpers/*"],
+      "@redux/*": ["./src/redux/*"],
+      "@model/*": ["./src/model/*"],
+      "@localStorage/*": ["./src/localStorage/*"]
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src",
+    "*.js",
+    ".next/types/**/*.ts"
+, "src/app", ".next/types/app/(auth)"  ],
+  "exclude": ["node_modules", "next.config.js"]
 }
