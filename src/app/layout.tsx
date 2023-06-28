@@ -15,7 +15,10 @@ type RootLayoutType = {
 const RootLayout: FC<RootLayoutType> = ({ children }) => {
   return (
     <html>
-      <body className="FXCE-body">
+      <body
+        className="FXCE-body"
+        style={{ background: "black", color: "white" }}
+      >
         <LayoutProvider>
           <div
             style={{

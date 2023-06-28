@@ -15,6 +15,9 @@ const HomePage = () => {
         <Link href="/signup">
           <button className="btn btn-success">Sign up</button>
         </Link>
+        <Link href="/joke/1">
+          <button className="btn btn-success">Joke</button>
+        </Link>
       </div>
     </div>
   );

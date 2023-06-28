@@ -8,7 +8,7 @@ const FormField: FC<FormFieldProps> = () => {
   const requestNewHeader = useCallback(() => {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open(
-      "POST",
+      "GET",
       `http://localhost:3000/api/revalidate?t=${new Date().getTime()}`,
       false
     ); // false for synchronous request
